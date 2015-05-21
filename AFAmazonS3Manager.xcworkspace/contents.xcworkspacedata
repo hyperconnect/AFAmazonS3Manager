@@ -16,5 +16,11 @@
       <FileRef
          location = "group:AFAmazonS3RequestSerializer.m">
       </FileRef>
+      <FileRef
+         location = "group:AFAmazonS3ResponseSerializer.h">
+      </FileRef>
+      <FileRef
+         location = "group:AFAmazonS3ResponseSerializer.m">
+      </FileRef>
    </Group>
 </Workspace>
