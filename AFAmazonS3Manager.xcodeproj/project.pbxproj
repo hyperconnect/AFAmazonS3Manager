@@ -20,29 +20,23 @@
 		FB7814351B0DEEF2009AB924 /* AFAmazonS3RequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = FB78142F1B0DEEF2009AB924 /* AFAmazonS3RequestSerializer.m */; };
 		FB7814361B0DEEF2009AB924 /* AFAmazonS3ResponseSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = FB7814301B0DEEF2009AB924 /* AFAmazonS3ResponseSerializer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FB7814371B0DEEF2009AB924 /* AFAmazonS3ResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7814311B0DEEF2009AB924 /* AFAmazonS3ResponseSerializer.m */; };
+		FBF20DA01B1C786B00DB505C /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF20D9F1B1C785700DB505C /* AFNetworking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2C890B651B1C2CD100CD7013 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2C890B611B1C2CD100CD7013 /* AFNetworking.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FB5FF6B51B0DE9E400718BDD;
-			remoteInfo = AFNetworking;
-		};
-		2C890B6A1B1C2D9B00CD7013 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2C890B611B1C2CD100CD7013 /* AFNetworking.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = FB5FF6B41B0DE9E400718BDD;
-			remoteInfo = AFNetworking;
-		};
 		FB6784911B15C03900B436ED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FB7814051B0DEECD009AB924 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = FB78140D1B0DEECD009AB924;
 			remoteInfo = AFAmazonS3Manager;
+		};
+		FBF20D9E1B1C785700DB505C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FBF20D9A1B1C785700DB505C /* AFNetworking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FB5FF6B51B0DE9E400718BDD;
+			remoteInfo = AFNetworking;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -61,7 +55,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2C890B611B1C2CD100CD7013 /* AFNetworking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AFNetworking.xcodeproj; path = /Users/dgoon/Works/xcode/azar/Modules/AzarDriver/../../submodules/AFNetworking/AFNetworking.xcodeproj; sourceTree = "<absolute>"; };
 		FB67846B1B15C01C00B436ED /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB67846E1B15C01C00B436ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB67846F1B15C01C00B436ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +71,7 @@
 		FB7814301B0DEEF2009AB924 /* AFAmazonS3ResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAmazonS3ResponseSerializer.h; sourceTree = "<group>"; };
 		FB7814311B0DEEF2009AB924 /* AFAmazonS3ResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAmazonS3ResponseSerializer.m; sourceTree = "<group>"; };
 		FB7814381B0DEF01009AB924 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FBF20D9A1B1C785700DB505C /* AFNetworking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AFNetworking.xcodeproj; path = ../AFNetworking/AFNetworking.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,20 +87,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBF20DA01B1C786B00DB505C /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2C890B621B1C2CD100CD7013 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2C890B661B1C2CD100CD7013 /* AFNetworking.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		FB67846C1B15C01C00B436ED /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,7 +118,7 @@
 		FB7814041B0DEECD009AB924 = {
 			isa = PBXGroup;
 			children = (
-				2C890B611B1C2CD100CD7013 /* AFNetworking.xcodeproj */,
+				FBF20D9A1B1C785700DB505C /* AFNetworking.xcodeproj */,
 				FB7814381B0DEF01009AB924 /* README.md */,
 				FB7814101B0DEECD009AB924 /* AFAmazonS3Manager */,
 				FB67846C1B15C01C00B436ED /* TestApp */,
@@ -160,6 +147,14 @@
 				FB7814311B0DEEF2009AB924 /* AFAmazonS3ResponseSerializer.m */,
 			);
 			path = AFAmazonS3Manager;
+			sourceTree = "<group>";
+		};
+		FBF20D9B1B1C785700DB505C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FBF20D9F1B1C785700DB505C /* AFNetworking.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,7 +204,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				2C890B6B1B1C2D9B00CD7013 /* PBXTargetDependency */,
 			);
 			name = AFAmazonS3Manager;
 			productName = AFAmazonS3Manager;
@@ -246,8 +240,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 2C890B621B1C2CD100CD7013 /* Products */;
-					ProjectRef = 2C890B611B1C2CD100CD7013 /* AFNetworking.xcodeproj */;
+					ProductGroup = FBF20D9B1B1C785700DB505C /* Products */;
+					ProjectRef = FBF20D9A1B1C785700DB505C /* AFNetworking.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -259,11 +253,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		2C890B661B1C2CD100CD7013 /* AFNetworking.framework */ = {
+		FBF20D9F1B1C785700DB505C /* AFNetworking.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = AFNetworking.framework;
-			remoteRef = 2C890B651B1C2CD100CD7013 /* PBXContainerItemProxy */;
+			remoteRef = FBF20D9E1B1C785700DB505C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -311,11 +305,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2C890B6B1B1C2D9B00CD7013 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AFNetworking;
-			targetProxy = 2C890B6A1B1C2D9B00CD7013 /* PBXContainerItemProxy */;
-		};
 		FB6784921B15C03900B436ED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FB78140D1B0DEECD009AB924 /* AFAmazonS3Manager */;
