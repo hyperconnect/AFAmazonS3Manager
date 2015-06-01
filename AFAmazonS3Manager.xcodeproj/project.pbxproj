@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB6784701B15C01C00B436ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB67846F1B15C01C00B436ED /* AppDelegate.swift */; };
-		FB6784721B15C01C00B436ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6784711B15C01C00B436ED /* ViewController.swift */; };
-		FB6784751B15C01C00B436ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB6784731B15C01C00B436ED /* Main.storyboard */; };
-		FB6784771B15C01C00B436ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6784761B15C01C00B436ED /* Images.xcassets */; };
-		FB67847A1B15C01C00B436ED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB6784781B15C01C00B436ED /* LaunchScreen.xib */; };
 		FB67848F1B15C03900B436ED /* AFAmazonS3Manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB78140E1B0DEECD009AB924 /* AFAmazonS3Manager.framework */; };
 		FB6784901B15C03900B436ED /* AFAmazonS3Manager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FB78140E1B0DEECD009AB924 /* AFAmazonS3Manager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FB7814321B0DEEF2009AB924 /* AFAmazonS3Manager.h in Headers */ = {isa = PBXBuildFile; fileRef = FB78142C1B0DEEF2009AB924 /* AFAmazonS3Manager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -56,12 +51,6 @@
 
 /* Begin PBXFileReference section */
 		FB67846B1B15C01C00B436ED /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB67846E1B15C01C00B436ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB67846F1B15C01C00B436ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FB6784711B15C01C00B436ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FB6784741B15C01C00B436ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FB6784761B15C01C00B436ED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		FB6784791B15C01C00B436ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FB78140E1B0DEECD009AB924 /* AFAmazonS3Manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFAmazonS3Manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7814121B0DEECD009AB924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB78142C1B0DEEF2009AB924 /* AFAmazonS3Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAmazonS3Manager.h; sourceTree = "<group>"; };
@@ -94,34 +83,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FB67846C1B15C01C00B436ED /* TestApp */ = {
-			isa = PBXGroup;
-			children = (
-				FB67846F1B15C01C00B436ED /* AppDelegate.swift */,
-				FB6784711B15C01C00B436ED /* ViewController.swift */,
-				FB6784731B15C01C00B436ED /* Main.storyboard */,
-				FB6784761B15C01C00B436ED /* Images.xcassets */,
-				FB6784781B15C01C00B436ED /* LaunchScreen.xib */,
-				FB67846D1B15C01C00B436ED /* Supporting Files */,
-			);
-			path = TestApp;
-			sourceTree = "<group>";
-		};
-		FB67846D1B15C01C00B436ED /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				FB67846E1B15C01C00B436ED /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		FB7814041B0DEECD009AB924 = {
 			isa = PBXGroup;
 			children = (
 				FBF20D9A1B1C785700DB505C /* AFNetworking.xcodeproj */,
 				FB7814381B0DEF01009AB924 /* README.md */,
 				FB7814101B0DEECD009AB924 /* AFAmazonS3Manager */,
-				FB67846C1B15C01C00B436ED /* TestApp */,
 				FB78140F1B0DEECD009AB924 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -267,9 +234,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB6784751B15C01C00B436ED /* Main.storyboard in Resources */,
-				FB67847A1B15C01C00B436ED /* LaunchScreen.xib in Resources */,
-				FB6784771B15C01C00B436ED /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,8 +251,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB6784721B15C01C00B436ED /* ViewController.swift in Sources */,
-				FB6784701B15C01C00B436ED /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,25 +273,6 @@
 			targetProxy = FB6784911B15C03900B436ED /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		FB6784731B15C01C00B436ED /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FB6784741B15C01C00B436ED /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FB6784781B15C01C00B436ED /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FB6784791B15C01C00B436ED /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FB6784881B15C01D00B436ED /* Debug */ = {

@@ -5,27 +5,31 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>EC220A65-014C-44A4-BD1B-16132B155717</string>
+	<string>D8BB8199-F7D4-470E-BB3E-18F01739290F</string>
 	<key>IDESourceControlProjectName</key>
 	<string>AFAmazonS3Manager</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>0A80F6DDD4F75ADB8AA3337D0C3E5D409E6519D4</key>
-		<string>https://github.com/hyperconnect/AFAmazonS3Manager</string>
+		<string>https://github.com/hyperconnect/AFAmazonS3Manager.git</string>
 		<key>497FFDFDB4AEB909526F7F78BF8A443B04B42706</key>
 		<string>https://github.com/hyperconnect/azar-ios</string>
+		<key>DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8</key>
+		<string>https://github.com/hyperconnect/AFNetworking.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>AFAmazonS3Manager.xcworkspace</string>
+	<string>AFAmazonS3Manager.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>0A80F6DDD4F75ADB8AA3337D0C3E5D409E6519D4</key>
-		<string>..</string>
+		<string>../..</string>
 		<key>497FFDFDB4AEB909526F7F78BF8A443B04B42706</key>
-		<string>../../..</string>
+		<string>../../../..</string>
+		<key>DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8</key>
+		<string>../../../AFNetworking</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/hyperconnect/AFAmazonS3Manager</string>
+	<string>https://github.com/hyperconnect/AFAmazonS3Manager.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -47,6 +51,14 @@
 			<string>0A80F6DDD4F75ADB8AA3337D0C3E5D409E6519D4</string>
 			<key>IDESourceControlWCCName</key>
 			<string>AFAmazonS3Manager</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AFNetworking</string>
 		</dict>
 	</array>
 </dict>
