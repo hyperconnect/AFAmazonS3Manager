@@ -3,18 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
-	<dict/>
-	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>FB67846A1B15C01C00B436ED</key>
+		<key>AFAmazonS3Manager.xcscheme_^#shared#^_</key>
 		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FB78140D1B0DEECD009AB924</key>
-		<dict>
-			<key>primary</key>
-			<true/>
+			<key>orderHint</key>
+			<integer>0</integer>
 		</dict>
 	</dict>
 </dict>

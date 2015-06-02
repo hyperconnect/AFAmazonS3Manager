@@ -24,7 +24,7 @@
 		<key>0A80F6DDD4F75ADB8AA3337D0C3E5D409E6519D4</key>
 		<string>../..</string>
 		<key>497FFDFDB4AEB909526F7F78BF8A443B04B42706</key>
-		<string>../../../..</string>
+		<string>../../..</string>
 		<key>DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8</key>
 		<string>../../../AFNetworking</string>
 	</dict>
@@ -42,7 +42,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>497FFDFDB4AEB909526F7F78BF8A443B04B42706</string>
 			<key>IDESourceControlWCCName</key>
-			<string>..</string>
+			<string></string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
