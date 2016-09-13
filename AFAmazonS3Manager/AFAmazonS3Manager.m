@@ -29,8 +29,10 @@ static NSString * AFPathByEscapingSpacesWithPlusSigns(NSString *path) {
     return [path stringByReplacingOccurrencesOfString:@" " withString:@"+"];
 }
 
-@interface AFAmazonS3Manager ()
+@interface AFAmazonS3Manager () <NSXMLParserDelegate>
 @property (readwrite, nonatomic, strong) NSURL *baseURL;
+@property (nonatomic, strong) NSMutableDictionary *parsedXML;
+@property (nonatomic, strong) NSMutableString *tempXMLString;
 @end
 
 @implementation AFAmazonS3Manager
@@ -293,7 +295,18 @@ static NSString * AFPathByEscapingSpacesWithPlusSigns(NSString *path) {
         }
     } failure:^(__unused AFHTTPRequestOperation *operation, NSError *error) {
         if (failure) {
-            failure(error);
+            NSString *dataKey = @"com.alamofire.serialization.response.error.data";
+            NSData *data = (NSData *)error.userInfo[dataKey];
+            NSXMLParser *parser = [[NSXMLParser alloc] initWithData:data];
+            parser.delegate = self;
+            [parser parse];
+
+            NSMutableDictionary *dataParsedUserInfo = [NSMutableDictionary dictionaryWithDictionary:error.userInfo];
+            [dataParsedUserInfo removeObjectForKey:dataKey];
+            [dataParsedUserInfo setObject:_parsedXML forKey:@"amazon.error.detail"];
+            NSError *dataParsedError = [NSError errorWithDomain:error.domain code:error.code userInfo:dataParsedUserInfo];
+
+            failure(dataParsedError);
         }
     }];
 
@@ -330,6 +343,30 @@ static NSString * AFPathByEscapingSpacesWithPlusSigns(NSString *path) {
     manager.responseSerializer = [self.responseSerializer copyWithZone:zone];
 
     return manager;
+}
+
+#pragma mark - NSXMLParserDelegate
+
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary<NSString *,NSString *> *)attributeDict {
+    if ([elementName isEqualToString:@"Error"]) {
+        _parsedXML = [[NSMutableDictionary alloc] init];
+    }
+}
+
+- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
+    if (!_tempXMLString) {
+        _tempXMLString = [NSMutableString stringWithString:string];
+    }
+    else {
+        [_tempXMLString appendString:string];
+    }
+}
+
+- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName  {
+    if (_tempXMLString != nil) {
+        [_parsedXML setObject:_tempXMLString forKey:elementName];
+        _tempXMLString = nil;
+    }
 }
 
 @end

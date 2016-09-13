@@ -178,7 +178,7 @@ static NSString * AFAWSSignatureForRequest(NSURLRequest *request, NSString *buck
     NSMutableURLRequest *mutableRequest = [request mutableCopy];
 
     if (self.accessKey && self.secret) {
-        NSDate *date = [NSDate date];
+        NSDate *date = self.adjustInterval ? [[NSDate date] dateByAddingTimeInterval:self.adjustInterval] : [NSDate date];
         NSString *signature = AFAWSSignatureForRequest(request, self.bucket, AFRFC822FormatStringFromDate(date), self.secret);
 
         [mutableRequest setValue:[NSString stringWithFormat:@"AWS %@:%@", self.accessKey, signature] forHTTPHeaderField:@"Authorization"];

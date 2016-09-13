@@ -47,6 +47,11 @@
 @property (nonatomic, copy) NSString *sessionToken;
 
 /**
+ The amount of TimeInterval added to [NSDate date] for Date Header. `0` by default.
+ */
+@property (nonatomic, assign) NSTimeInterval adjustInterval;
+
+/**
  Whether to connect over HTTPS. `YES` by default.
 
  @see `AFAmazonS3Manager -baseURL`
