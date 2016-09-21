@@ -295,16 +295,20 @@ static NSString * AFPathByEscapingSpacesWithPlusSigns(NSString *path) {
         }
     } failure:^(__unused AFHTTPRequestOperation *operation, NSError *error) {
         if (failure) {
+            NSError *dataParsedError = error;
             NSString *dataKey = @"com.alamofire.serialization.response.error.data";
             NSData *data = (NSData *)error.userInfo[dataKey];
+
             NSXMLParser *parser = [[NSXMLParser alloc] initWithData:data];
             parser.delegate = self;
-            [parser parse];
 
-            NSMutableDictionary *dataParsedUserInfo = [NSMutableDictionary dictionaryWithDictionary:error.userInfo];
-            [dataParsedUserInfo removeObjectForKey:dataKey];
-            [dataParsedUserInfo setObject:_parsedXML forKey:@"amazon.error.detail"];
-            NSError *dataParsedError = [NSError errorWithDomain:error.domain code:error.code userInfo:dataParsedUserInfo];
+            if ([parser parse] && _parsedXML != nil) {
+                // parse는 동기적으로 XML을 parse하며, 성공할 경우 true를 리턴하고 property _parsedXML을 새롭게 initialize 한다.
+                NSMutableDictionary *dataParsedUserInfo = [NSMutableDictionary dictionaryWithDictionary:error.userInfo];
+                [dataParsedUserInfo removeObjectForKey:dataKey];
+                [dataParsedUserInfo setObject:_parsedXML forKey:@"amazon.error.detail"];
+                dataParsedError = [NSError errorWithDomain:error.domain code:error.code userInfo:dataParsedUserInfo];
+            }
 
             failure(dataParsedError);
         }
