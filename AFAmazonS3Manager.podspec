@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
   s.author       = { "Mattt Thompson" => "m@mattt.me" }
   s.source       = { :git => "https://github.com/hyperconnect/AFAmazonS3Manager.git",
-                     :branch => "hpcnt" }
+                     :branch => "cocoapods" }
 
   s.ios.deployment_target = '6.0'
   s.osx.deployment_target = '10.8'
